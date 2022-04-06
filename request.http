@@ -1,0 +1,107 @@
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "0828292568",
+    "password": "1234567"
+}
+###
+GET http://localhost:8080/api/users/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM0N2IyMDViNzYyMmI3ZGZkMmZhNWIiLCJpYXQiOjE2NDc2NjAyMTl9.Dp6ooRkVo-WA74moK6pwJkhrTs78uR5neElkaQF7y9Y
+
+###
+GET http://localhost:8080/api/users/6235913915cc25e747326a5f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM1OTEzOTE1Y2MyNWU3NDczMjZhNWYiLCJpYXQiOjE2NDc2Nzc3NTN9.xsoYyIii4umiR5fhYQoQWEABncapOBTUV3DWBRro8Ck
+
+###
+PUT http://localhost:8080/api/users/6235913915cc25e747326a5f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM1OTEzOTE1Y2MyNWU3NDczMjZhNWYiLCJpYXQiOjE2NDc2Nzc3NTN9.xsoYyIii4umiR5fhYQoQWEABncapOBTUV3DWBRro8Ck
+
+{
+    "desc": "hikari yuki"
+}
+
+###
+DELETE http://localhost:8080/api/users/62347b205b7622b7dfd2fa5b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM0N2IyMDViNzYyMmI3ZGZkMmZhNWIiLCJpYXQiOjE2NDc2NjAyMTl9.Dp6ooRkVo-WA74moK6pwJkhrTs78uR5neElkaQF7y9Y
+
+###
+GET http://localhost:8080/api/users/search/username?name=
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlZjE0OWZkZWQzZDdhNzM4YjQ4YzQiLCJpYXQiOjE2NDg5Nzk4NDcsImV4cCI6MTY0ODk4MzQ0N30.9ZgXd7OPqAukAWYmwzHZcGen27cagQMokw8w40ltDqM
+
+###
+PUT http://localhost:8080/api/users/62347be3824feda27aa42844/unfollow
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM1OTEzOTE1Y2MyNWU3NDczMjZhNWYiLCJpYXQiOjE2NDc3NDk5NjF9.76pAMTVDmpjZ_LToLtWCp3hrvOSbWi6tnOqhpV-7oMI
+
+###
+POST http://localhost:8080/api/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjQwNTlhZTUzYTI5MGQ5YThiYWM1MzciLCJpYXQiOjE2NDg4OTkyNDQsImV4cCI6MTY0ODkwMjg0NH0.xECtufeOk6x0FU4jUuKVkx5AH50_xKbdFzZFxa5lFZ8
+
+{
+    "desc": "this is 11 post of hikari"
+}
+
+###
+POST http://localhost:8080/api/posts/624835a9a87cc53b602ea190/share
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlZjE0OWZkZWQzZDdhNzM4YjQ4YzQiLCJpYXQiOjE2NDg5MDk4NzUsImV4cCI6MTY0ODkxMzQ3NX0.EqMZJScqkYA3mimQCM2QkNMQjWIhOBaetw8UWiWrMEI
+
+{
+    "desc": "share post 2"
+}
+###
+GET http://localhost:8080/api/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlZjE0OWZkZWQzZDdhNzM4YjQ4YzQiLCJpYXQiOjE2NDg5MDk4NzUsImV4cCI6MTY0ODkxMzQ3NX0.EqMZJScqkYA3mimQCM2QkNMQjWIhOBaetw8UWiWrMEI
+
+###
+DELETE http://localhost:8080/api/posts/62485e47a70b37e0cf591c31
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlZjE0OWZkZWQzZDdhNzM4YjQ4YzQiLCJpYXQiOjE2NDg5MDk4NzUsImV4cCI6MTY0ODkxMzQ3NX0.EqMZJScqkYA3mimQCM2QkNMQjWIhOBaetw8UWiWrMEI
+
+
+###
+PUT  http://localhost:8080/api/posts/6246bfd3edef165fa1e7a177/comment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjQwNTlhZTUzYTI5MGQ5YThiYWM1MzciLCJpYXQiOjE2NDg4MjE0OTMsImV4cCI6MTY0ODgyNTA5M30._b7w_y3S2HIsZ5TbnstVShIsonfHLzGt16WdLlw2y28
+
+{
+    "comment": "this is eight comment"
+}
+###
+GET http://localhost:8080/api/posts/6246bfd3edef165fa1e7a177/comments?page=1&size=3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjQwNTlhZTUzYTI5MGQ5YThiYWM1MzciLCJpYXQiOjE2NDg4MTE0OTQsImV4cCI6MTY0ODgxNTA5NH0.dtGxvEEED6Zh1yW2ft_a5NI-UuT9OMbpdvvcShghXPU
+
+
+
+###
+//refresh token
+GET http://localhost:8080/api/auth/token
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM1OTEzOTE1Y2MyNWU3NDczMjZhNWYiLCJpYXQiOjE2NDc3NTM2NDR9.-ux_mutT_a6bEdgLlSR2O4iq_e8mfmcHfZHj9vvdRDA
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM1OTEzOTE1Y2MyNWU3NDczMjZhNWYiLCJpYXQiOjE2NDc3NzM2NTksImV4cCI6MTY0Nzc4MDg1OX0.9CBQtAf9vV97IseV3ZZDAlL3X59eVzkbjfRvHEn6bEs"
+}
+
+###
+GET  http://localhost:8080/api/conversation
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlZjE0OWZkZWQzZDdhNzM4YjQ4YzQiLCJpYXQiOjE2NDkwNTk5ODQsImV4cCI6MTY0OTA2MzU4NH0.h4vLy2g6FrBaKgg85zBh9HTgRADupOtR5fIsUw8dhuI
+
+
+
+
+
+
+
+
+
